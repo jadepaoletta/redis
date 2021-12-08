@@ -1,4 +1,4 @@
-previewsEnabled: false
+previewsEnabled: true
 services:
 - type: pserv
   name: redis
@@ -17,13 +17,14 @@ services:
 - type: cron
   name: cronometer2
   env: python
-  plan: Starter Plus
+  plan: Starter
   schedule: "0 * * * *"
   buildCommand: pip install -r requirements.txt
   startCommand: python main.py
 - type: cron
   name: cronometer3
   env: python
+  plan: Standard
   schedule: "0 * * * *"
   buildCommand: pip install -r requirements.txt
   startCommand: python main.py
